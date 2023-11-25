@@ -76,7 +76,7 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #CF3302;
+  color: #F55827;
 }
 
 header button {
@@ -251,11 +251,181 @@ header button:hover {
   line-height: 150%;
 }
 
+/* Videos Section */
+.last-videos {
+  position: relative;
+  width: 100%;
+  padding: 5rem 0 4rem;
+  overflow: hidden;
+}
+
+.last-videos::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24%;
+  height: 100%;
+  background: linear-gradient(270deg, #060608 -3.29%, rgba(6, 6, 8, 0.00) 64.25%);
+  z-index: 5;
+}
+
+.last-videos .container {
+  position: relative;
+}
+
+.last-videos .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.last-videos .header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.last-videos .card {
+  display: block;
+  width: 100%;
+  max-width: 24.0625rem;
+}
+
+.last-videos .card .thumbnail {
+  position: relative;
+  width: 100%;
+  height: 13.5rem;
+  margin-bottom: 1.375rem;
+}
+
+.last-videos .card .thumbnail::before {
+  content: '';
+  width: 24.4375rem;
+  height: 13.875rem;
+  background: url('../img/mask-hover.svg') center center no-repeat;
+  position: absolute;
+  top: -0.1875rem;
+  left: -0.1875rem;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.last-videos .card:hover .thumbnail::before {
+  opacity: 1;
+}
+
+.last-videos .card .thumbnail> :first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.last-videos .card .thumbnail .icon-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.last-videos .card:hover .thumbnail .icon-play {
+  opacity: 1;
+}
+
+.last-videos .card span {
+  color: #C0C0CC;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+/* Swiper Pagination */
+.last-videos .header .swiper-pagination {
+  position: relative;
+  width: auto;
+  top: 0;
+}
+
+.last-videos .header .swiper-pagination .swiper-pagination-bullet {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0;
+  background-color: #2F2F3B;
+  opacity: 1;
+}
+
+.last-videos .header .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #FFFFFF;
+}
+
+.last-videos .btn-swiper {
+  position: absolute;
+  top: 8.3125rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #2F2F3B;
+  z-index: 10;
+  transition: opacity 300ms ease;
+}
+
+.last-videos .btn-prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.last-videos .btn-next {
+  right: 0;
+}
+
+.last-videos .btn-swiper.swiper-button-disabled {
+  opacity: 0;
+}
+
+/* Villain Section */
+.villain {
+  width: 100%;
+  height: 50rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  animation: changeVillainBG 10.5s infinite linear;
+}
+
+.villain h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.villain p {
+  font-size: 1.125rem;
+  line-height: 150%;
+  margin-bottom: 4.5rem;
+}
+
+.villain img {
+  margin: 0 auto;
+}
+
 /* Footer */
 footer {
   position: relative;
   width: 100%;
-  padding: 96px 0 4.5rem;
+  padding: 6rem 0 4.5rem;
 }
 
 footer::before {
@@ -279,7 +449,6 @@ footer .left {
 }
 
 footer .left h3 {
-  font-family: 'Mohave', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -301,4 +470,90 @@ footer .right span {
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 150%;
+}
+
+@keyframes changeVillainBG {
+  0% {
+    background-image: url('../img/bg/01.jpg');
+  }
+
+  5% {
+    background-image: url('../img/bg/02.jpg');
+  }
+
+  10% {
+    background-image: url('../img/bg/03.jpg');
+  }
+
+  15% {
+    background-image: url('../img/bg/04.jpg');
+  }
+
+  20% {
+    background-image: url('../img/bg/05.jpg');
+  }
+
+  25% {
+    background-image: url('../img/bg/06.jpg');
+  }
+
+  30% {
+    background-image: url('../img/bg/07.jpg');
+  }
+
+  35% {
+    background-image: url('../img/bg/08.jpg');
+  }
+
+  40% {
+    background-image: url('../img/bg/09.jpg');
+  }
+
+  45% {
+    background-image: url('../img/bg/10.jpg');
+  }
+
+  50% {
+    background-image: url('../img/bg/11.jpg');
+  }
+
+  55% {
+    background-image: url('../img/bg/12.jpg');
+  }
+
+  60% {
+    background-image: url('../img/bg/13.jpg');
+  }
+
+  65% {
+    background-image: url('../img/bg/14.jpg');
+  }
+
+  70% {
+    background-image: url('../img/bg/15.jpg');
+  }
+
+  75% {
+    background-image: url('../img/bg/16.jpg');
+  }
+
+  80% {
+    background-image: url('../img/bg/17.jpg');
+  }
+
+  85% {
+    background-image: url('../img/bg/18.jpg');
+  }
+
+  90% {
+    background-image: url('../img/bg/19.jpg');
+  }
+
+  95% {
+    background-image: url('../img/bg/20.jpg');
+  }
+
+  100% {
+    background-image: url('../img/bg/21.jpg');
+  }
 }
