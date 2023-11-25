@@ -42,9 +42,9 @@ h6 {
 
 .container {
   width: 100%;
-  max-width: 78rem;
+  max-width: 79rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 /* Header */
@@ -117,6 +117,7 @@ header button:hover {
   position: absolute;
   bottom: 0;
   left: 0;
+  pointer-events: none;
 }
 
 .hero .container {
@@ -287,6 +288,7 @@ header button:hover {
   height: 100%;
   background: linear-gradient(270deg, #060608 -3.29%, rgba(6, 6, 8, 0.00) 64.25%);
   z-index: 5;
+  pointer-events: none;
 }
 
 .last-videos .container {
@@ -432,6 +434,7 @@ header button:hover {
   position: absolute;
   top: 0;
   left: 0;
+  pointer-events: none;
 }
 
 .villain::after {
@@ -442,6 +445,7 @@ header button:hover {
   position: absolute;
   bottom: 0;
   left: 0;
+  pointer-events: none;
 }
 
 .villain h2 {
@@ -475,6 +479,7 @@ footer::before {
   background: url('../img/divider.png') center center no-repeat;
   position: absolute;
   top: 0.5rem;
+  pointer-events: none;
 }
 
 footer .container {
@@ -619,5 +624,144 @@ footer .right span {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    height: auto;
+    padding: 4rem 0;
+  }
+
+  .last-videos {
+    padding: 2.5rem 0;
+  }
+
+  .last-videos .btn-prev {
+    left: 0.5rem;
+  }
+
+  .last-videos .btn-next {
+    right: 0.5rem;
+  }
+
+  .villain {
+    height: 34.375rem;
+  }
+
+  footer {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 991px) {
+  header nav {
+    display: none;
+  }
+
+  .hero .left {
+    max-width: 100%;
+  }
+
+  .hero .right {
+    display: none;
+  }
+
+  .last-videos .btn-swiper {
+    display: none;
+  }
+
+  .villain::before,
+  .villain::after {
+    height: 6.25rem;
+  }
+
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  header .logo {
+    width: 7.5rem;
+  }
+
+  header button {
+    padding: 0 1.25rem;
+  }
+
+  .hero {
+    padding: 2.5rem 0;
+    background-size: 71rem;
+    background-position-x: 62%;
+  }
+
+  .hero .platform {
+    margin-bottom: 1rem;
+  }
+
+  .hero .left h1 {
+    font-size: 3rem;
+    line-height: 120%;
+  }
+
+  .hero .left h1+p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero .left .price {
+    margin-bottom: 0.5rem;
+  }
+
+  .hero .left .btns {
+    margin-bottom: 2rem;
+  }
+
+  .hero .left .btns .btn-primary {
+    height: 3rem;
+    padding: 0 2rem;
+  }
+
+  .hero .left .btns .btn-favorite {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .hero .left ul li p {
+    font-size: 0.875rem;
+  }
+
+  .hero .left ul li span {
+    margin: 0 0.5rem;
+  }
+
+  .villain {
+    height: auto;
+    padding: 4rem 1.5rem;
+    background-size: 56.25rem;
+  }
+
+  .villain h2 {
+    font-size: 2.25rem;
+    line-height: 120%;
+    z-index: 1;
+  }
+
+  .villain p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 18.75rem;
+  }
+
+  footer {
+    padding: 2.5rem 0;
+  }
+
+  footer::before {
+    background-size: 110%;
   }
 }
